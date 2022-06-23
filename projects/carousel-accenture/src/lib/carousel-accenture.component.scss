@@ -1,0 +1,20 @@
+
+.carousel-lib{
+    overflow-x: hidden;
+    &-wrapper{
+        justify-content: center;
+        align-items: center;
+        .card{
+            align-items: center;
+            justify-content: space-around;
+            height: 15rem;
+            box-shadow: 0 2px 4px #00000014;
+            border-radius: 1rem;
+            &.active{
+                border-bottom: 0.5rem solid #000;
+                height: 20rem;
+            }
+        }
+    }
+
+}

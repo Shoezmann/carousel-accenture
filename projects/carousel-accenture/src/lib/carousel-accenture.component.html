@@ -1,0 +1,25 @@
+
+<section>
+    <div class="carousel-lib container-fluid">
+        <div class="row carousel-lib-wrapper">
+            <div  *ngFor="let product of products; let i = index"  class="col-2 carousel-lib-item" [ngClass]="{'col-4' : activeSlideIndex === i}" #item>
+                <div class="card" [ngClass]="{'active' : activeSlideIndex === i}">
+                    <div class="product-image">
+                    <img [src]="product.productImage" [alt]="i">
+                    </div>
+                    <div class="description">
+                        <h6>{{product.productDescription}}</h6>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <div class="carousel-lib-nav">
+            <button class="carousel-lib-nav--prev" (click)="prevSlide()">
+                <span><<</span>
+            </button>
+            <button class="carousel-lib-nav--next" (click)="nextSlide()">
+                <span (click)="nextSlide">>></span>
+            </button>
+        </div>
+    </div>
+</section>

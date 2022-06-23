@@ -3,5 +3,8 @@
   "dest": "../../dist/carousel-accenture",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "assets": [
+    "style.scss"
+  ]
 }
