@@ -16,5 +16,25 @@
             }
         }
     }
+    &-nav{
+        display: flex;
+        justify-content: space-around;
+        &--prev,&--next{
+            border-radius: 50%;
+            background: #000001;
+            color: #ffffff;
+            border-color: #000001;
+            &:hover{
+                background: orange;
+                color: #000001;
+                border-color: orange;
+            }
+            &:active{
+                background: orange;
+                color: #000001;
+                border-color: orange;
+            }
+        }
+    }
 
 }

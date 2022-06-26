@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
+import { DeviceDetectorService } from 'ngx-device-detector';
 interface product {
   productImage: string;
   productLink: string;
@@ -13,38 +14,14 @@ interface product {
 })
 export class CarouselAccentureComponent implements OnInit {
   
-  activeSlideIndex = 0
-
+  activeSlideIndex = 0;
+  deviceInfo: any = null;
 
   products: product[] = [
     {
       productImage: 'https://pics.freeicons.io/uploads/icons/png/6437601791655962451-512.png',
-      productLink: '',
-      productImageAlt: '',
-      productDescription: 'Item'      
-    },
-    {
-      productImage: 'https://pics.freeicons.io/uploads/icons/png/6437601791655962451-512.png',
-      productLink: '',
-      productImageAlt: '',
-      productDescription: 'Item'      
-    },
-    {
-      productImage: 'https://pics.freeicons.io/uploads/icons/png/6437601791655962451-512.png',
-      productLink: '',
-      productImageAlt: '',
-      productDescription: 'Item'      
-    },
-    {
-      productImage: 'https://pics.freeicons.io/uploads/icons/png/6437601791655962451-512.png',
-      productLink: '',
-      productImageAlt: '',
-      productDescription: 'Item'      
-    },
-    {
-      productImage: 'https://pics.freeicons.io/uploads/icons/png/6437601791655962451-512.png',
-      productLink: '',
-      productImageAlt: '',
+      productLink: 'dadsds',
+      productImageAlt: 'dsadsad',
       productDescription: 'Item'      
     },
     {
@@ -74,12 +51,11 @@ export class CarouselAccentureComponent implements OnInit {
     
   ]
 
-  @ViewChild('item') swap!: ElementRef;
-
-  constructor() { }
+  constructor(private deviceService: DeviceDetectorService) { }
 
   ngOnInit(): void {
-    console.log(this.swap.nativeElement.value);
+    this.deviceInfo = this.deviceService.deviceType;
+    console.log(this.deviceInfo);
   }
 
   prevSlide(): void{
@@ -88,6 +64,7 @@ export class CarouselAccentureComponent implements OnInit {
       this.activeSlideIndex = this.products.length - 1;
     }else{
       this.activeSlideIndex--;
+      console.log(this.activeSlideIndex);
     }
   }
   nextSlide(): void{
@@ -96,6 +73,14 @@ export class CarouselAccentureComponent implements OnInit {
       this.activeSlideIndex = 0;
     }else{
       this.activeSlideIndex++;
+      console.log(this.activeSlideIndex);
     }
+  }
+
+  shiftItem(arr: any , new_index: any, old_index: any){
+    let el = arr[old_index];
+    arr.splice(old_index, 1);
+    arr.splice(new_index, 0, el);
+    console.log(arr)
   }
 }
