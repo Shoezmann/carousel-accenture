@@ -7,24 +7,54 @@
         .card{
             align-items: center;
             justify-content: space-around;
-            height: 15rem;
+            height: 20rem;
             box-shadow: 0 2px 4px #00000014;
             border-radius: 1rem;
+            flex-direction: column;
             &.active{
                 border-bottom: 0.5rem solid #f8c000;
-                height: 20rem;
+                min-height: 30rem;
+                &:hover{
+                    background-color: #000001;
+                    color: #fff;
+                }
+            } 
+            .product{
+                :hover{
+                    color: #fff;
+                }
+                &-description{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                &-image{
+                    & > img{
+                        display: block;
+                        width: 10rem;
+                    }
+                }
+                &-link{
+                    text-decoration: none;
+                    color: #000;
+                }
             }
+            
         }
     }
     &-nav{
+        position: absolute;
         display: flex;
         justify-content: space-around;
+        margin-top: 25rem;
         &--prev,&--next{
             border-radius: 50%;
             background: #000001;
             color: #ffffff;
             border-color: transparent;
             box-shadow: 0 2px 4px #00000014;
+            width: 2rem;
+            height: 2rem;
             &:hover{
                 background: #f8c000;
                 color: #000001;
