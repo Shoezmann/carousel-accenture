@@ -4,10 +4,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "carousel-accenture": [
-        "dist/carousel-accenture/carousel-accenture",
-        "dist/carousel-accenture"
-      ]
+      "carousel-accenture": ["dist/carousel-accenture"]
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,

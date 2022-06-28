@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 interface product {
   productImage: string;
@@ -9,13 +9,12 @@ interface product {
   productDescription: string;
   order: number;
 }
-
 @Component({
-  selector: 'lib-carousel',
-  templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.scss']
+  selector: 'lib-item',
+  templateUrl: './item.component.html',
+  styleUrls: ['./item.component.scss']
 })
-export class CarouselComponent implements OnInit {
+export class ItemComponent implements OnInit {
 
   activeSlideIndex = 0;
   deviceInfo: any = null;
@@ -61,9 +60,11 @@ export class CarouselComponent implements OnInit {
     }
 
   ]
+
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
   prevSlide(){
@@ -97,5 +98,4 @@ export class CarouselComponent implements OnInit {
     arr.splice(new_index, 0, el);
     console.log(arr)
   }
-
 }

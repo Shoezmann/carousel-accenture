@@ -2,11 +2,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'lib-carousel-accenture',
   template: ``,
-  styles: ['']
+  styles:[]
 })
 export class CarouselAccentureComponent implements OnInit {
-
-
 
   constructor() { }
 
