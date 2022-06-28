@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { CarouselAccentureComponent } from './carousel-accenture.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
@@ -12,7 +14,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
   imports: [
     BrowserModule,
     CommonModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    BrowserAnimationsModule
   ],
   exports: [
     CarouselAccentureComponent

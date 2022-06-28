@@ -4,7 +4,13 @@
   "lib": {
     "entryFile": "src/public-api.ts"
   },
+  "allowedNonPeerDependencies": [
+      "@fortawesome/fontawesome-svg-core"
+  ],
   "assets": [
-    "style.scss"
+    "style.scss",
+    "node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "node_modules/animate.css/animate.min.css
+
   ]
 }

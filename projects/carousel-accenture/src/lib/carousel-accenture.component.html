@@ -2,7 +2,7 @@
 <section>
     <div class="carousel-lib container-fluid">
         <div class="row carousel-lib-wrapper">
-            <div  *ngFor="let product of products; let i = index"  class="col-2 carousel-lib-item" [ngClass]="{'col-4' : activeSlideIndex === i}">
+            <div  *ngFor="let product of products; let i = index"  class="col-2 carousel-lib-item" [ngClass]="{'col-4' : activeSlideIndex === i, 'animate__animated animate__fadeInLeft': activeSlideIndex === i}">
                 <div  class="card p-2" [ngClass]="{'active' : activeSlideIndex === i}">
                     <div class="product-image">
                     <img [src]="product.productImage" [alt]="i">
