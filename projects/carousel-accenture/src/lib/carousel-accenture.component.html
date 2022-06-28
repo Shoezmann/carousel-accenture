@@ -14,11 +14,11 @@
             </div>  
         </div>
         <div class="carousel-lib-nav">
-            <button class="carousel-lib-nav--prev" (click)="prevSlide()">
-                <span><</span>
+            <button class="carousel-lib-nav--prev" type="button" (click)="prevSlide()" [ngClass]="{'disabled': activeSlideIndex === 0}">
+                <span></span>
             </button>
-            <button class="carousel-lib-nav--next" (click)="nextSlide()">
-                <span (click)="nextSlide">></span>
+            <button class="carousel-lib-nav--next" type="button" (click)="nextSlide()" [ngClass]="{'disabled': activeSlideIndex === 4}">
+                <span></span>
             </button>
         </div>
     </div>

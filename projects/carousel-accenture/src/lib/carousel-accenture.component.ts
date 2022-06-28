@@ -1,6 +1,8 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 import { DeviceDetectorService } from 'ngx-device-detector';
+// import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
 interface product {
   productImage: string;
   productLink: string;
@@ -16,6 +18,8 @@ export class CarouselAccentureComponent implements OnInit {
   
   activeSlideIndex = 0;
   deviceInfo: any = null;
+
+  // faCoffe = faCoffee;
 
   products: product[] = [
     {

@@ -11,7 +11,7 @@
             box-shadow: 0 2px 4px #00000014;
             border-radius: 1rem;
             &.active{
-                border-bottom: 0.5rem solid #000;
+                border-bottom: 0.5rem solid #f8c000;
                 height: 20rem;
             }
         }
@@ -23,18 +23,20 @@
             border-radius: 50%;
             background: #000001;
             color: #ffffff;
-            border-color: #000001;
+            border-color: transparent;
+            box-shadow: 0 2px 4px #00000014;
             &:hover{
-                background: orange;
+                background: #f8c000;
                 color: #000001;
-                border-color: orange;
+                border-color: transparent;
+                box-shadow: 0 2px 4px #00000014;
             }
             &:active{
-                background: orange;
+                background: #f8c000;
                 color: #000001;
-                border-color: orange;
+                border-color: transparent;
+                box-shadow: 0 2px 4px #00000014;
             }
         }
     }
-
 }
