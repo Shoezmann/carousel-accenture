@@ -5,12 +5,15 @@
     "entryFile": "src/public-api.ts"
   },
   "allowedNonPeerDependencies": [
-      "@fortawesome/fontawesome-svg-core"
+      "@fortawesome/fontawesome-svg-core",
+      "@fortawesome/angular-fontawesome"
   ],
   "assets": [
-    "style.scss",
     "node_modules/bootstrap/dist/css/bootstrap.min.css",
-    "node_modules/animate.css/animate.min.css"
+    "node_modules/animate.css/animate.min.css",
+    "style.scss"
+
+
 
   ]
 }
