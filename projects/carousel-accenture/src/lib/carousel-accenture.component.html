@@ -2,14 +2,14 @@
 <section>
     <div class="carousel-lib container-fluid">
         <div class="row carousel-lib-wrapper">
-            <div  *ngFor="let product of products; let i = index"  class="col-2 carousel-lib-item" [ngClass]="{'col-4' : activeSlideIndex === i, 'animate__animated animate__fadeInLeft': activeSlideIndex === i}">
+            <div  *ngFor="let product of products; let i = index"  class="col-2 carousel-lib-item"  [ngClass]="{'col-4 ' : activeSlideIndex === i}">
                 <div  class="card p-2" [ngClass]="{'active' : activeSlideIndex === i}">
                     <div class="product-image">
                     <img [src]="product.productImage" [alt]="i">
                     </div>
                     <div class="product-description">
                         <h3 *ngIf="activeSlideIndex === i">Get a device</h3>
-                        <h6 *ngIf="activeSlideIndex != i" (mouseover)="cta = activeSlideIndex === i" (mouseout)="cta = false">{{product.productDescription}}</h6>
+                        <h6 *ngIf="activeSlideIndex != i">{{product.productDescription}} {{i}}</h6>
                         <a  *ngIf="activeSlideIndex === i" class="p-4 product-link">START HERE <fa-icon [icon]="faChevronRight"></fa-icon></a>
                     </div>
                 </div>
