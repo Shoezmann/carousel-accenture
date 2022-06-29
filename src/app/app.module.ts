@@ -15,7 +15,6 @@ import { AppComponent } from './app.component';
     CommonModule,
     CarouselAccentureModule
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -25,9 +25,4 @@ import { ItemComponent } from './item/item.component';
   exports: [ItemComponent]
 })
 export class CarouselAccentureModule {
-  static forRoot(): ModuleWithProviders<CarouselAccentureModule>{
-    return {
-      ngModule: CarouselAccentureModule
-    }
-  }
- }
+}
