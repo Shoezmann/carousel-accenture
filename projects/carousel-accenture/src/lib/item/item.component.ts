@@ -74,12 +74,6 @@ export class ItemComponent implements OnInit {
 
     }else{
       this.activeSlideIndex--;
-
-    //   for(let i = 0; i < this.products.length; i++){
-    //     console.log(this.products[i]);
-    //     [this.products[this.activeSlideIndex], this.products[i] ] = [this.products[i], this.products[this.activeSlideIndex]];
-    //     return this.products;
-    // }
   }}
 
   nextSlide(){

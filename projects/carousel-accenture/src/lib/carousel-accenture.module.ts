@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, ModuleWithProviders, NgModule } from '@angular/core';
 
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -22,6 +22,12 @@ import { ItemComponent } from './item/item.component';
     BrowserAnimationsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  exports: []
+  exports: [ItemComponent]
 })
-export class CarouselAccentureModule { }
+export class CarouselAccentureModule {
+  static forRoot(): ModuleWithProviders<CarouselAccentureModule>{
+    return {
+      ngModule: CarouselAccentureModule
+    }
+  }
+ }
